@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const apiSlice = createApi({
     reducerPath: "userApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://food-delevery-qhop.onrender.com/api/" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://fooddelevery-backend.onrender.com/api/" }),
     endpoints: builder => {
         return {
             userRegister: builder.mutation({
