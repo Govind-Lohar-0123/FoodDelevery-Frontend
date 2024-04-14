@@ -1,0 +1,107 @@
+
+.profile-dash{
+   color:black;
+    height: 100vh;
+   padding:10px 5px;
+   width: 20%;
+   margin-top: 3rem;
+}
+.profile-dash > div{
+    border-radius: 20px;
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 2rem;
+   
+    
+    height:30%
+}
+    
+.profile-dash nav{
+    margin: 3rem;;
+}
+
+.profile-dash img{
+    border-radius: 100%;
+    width:100%;
+    height:100%;
+}
+.profile-dash nav ul{
+    display: grid;
+    row-gap: 10px;;
+    width:100%;
+    grid-template-columns: repeat(1,1fr);
+   
+    padding: 0;
+    justify-content: start;
+}
+.profile-dash li{
+   display: flex;
+   /* gap:1rem; */
+   align-items: center;
+   justify-content: center;
+   gap:20px;
+}
+.profile-dash li i{
+    display: inline;
+    color:white;
+}
+.profile-dash li a {
+    width:80%;
+    text-align: center;
+    padding: 5px;;
+    background-color: blue;
+}
+
+#dashboard{
+    grid-template-columns:20% 80%;
+    grid-template-rows: 100%;
+    margin-left:10px;;
+  width:100%;
+  gap:15px;
+    
+}
+.profile-right{
+    width:100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.profile-right form{
+  
+width:80%;
+}
+
+.profile-right form div input{
+    width:50%;
+}
+
+/* ////////////myorder list///////// */
+
+table{
+    width:80%;
+    text-align: center;
+    background-color: white;
+    font-weight:bold;
+}
+th{
+    font-size:1.3rem;
+}
+
+td,th{
+    padding:10px;
+     
+    border:solid 1px black!important;
+    
+}
+td{  font-size:1.1rem;}
+caption{
+    caption-side: top;
+    font-size: 2rem;
+    background-color: black;
+}
+#myorder{
+    /* align-items:flex-start; */
+    
+
+}
