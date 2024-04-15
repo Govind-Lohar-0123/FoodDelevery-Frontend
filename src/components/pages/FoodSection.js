@@ -28,7 +28,7 @@ function FoodSection() {
                                 <div className="row-div pt-5">
                                     {
                                         responseInfo.data.foodData.filter((item, i) => { 
-                                            console.log((item.foodName.toLowerCase().includes(search.toLowerCase())));
+                                           
                                             return (item.categoryName == data.categoryName) && (item.foodName.toLowerCase().includes(search.toLowerCase()))}).
 
                                         map((item, i) => {
