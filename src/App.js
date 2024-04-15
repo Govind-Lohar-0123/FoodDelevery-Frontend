@@ -28,12 +28,12 @@ export default function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/signup" element={<Register />} />
 
               
                
             
-             <> <Route path="/" element={<ProfileDash />}>
+             <Route path="/" element={<ProfileDash />}>
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/myorder" element={<MyOrder />} />
                 <Route path="/mycard" element={<MyCard />} />
@@ -41,7 +41,7 @@ export default function App() {
               <Route path="/" element={<AdminDash />}>
                 <Route path="" element={<MyOrder />} />
               </Route>
-              </>
+            
               
             </Route>
 
