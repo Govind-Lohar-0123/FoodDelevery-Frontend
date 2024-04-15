@@ -57,7 +57,7 @@ function Navbar() {
                                             <li><NavLink to="/signup" className="btn bg-white register-btn">SignUp</NavLink></li>
                                         </> :
                                         <>
-                                            <li><NavLink to="/profile" className=" text-transform-lowercase "style={{textTransform:"lowercase" }}>{loggedUser}</NavLink></li>
+                                            <li><NavLink to="#" className=" text-transform-lowercase "style={{textTransform:"lowercase" }}>{loggedUser}</NavLink></li>
                                             <li><NavLink to="#" onClick={logoutHandle} className="btn bg-white  text-dark">Logout</NavLink></li>
                                         </>
 

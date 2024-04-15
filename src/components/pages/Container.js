@@ -2,7 +2,7 @@ import React from "react";
 import Background from "./Background";
 import FoodSection from "./FoodSection";
 
-console.log("container");
+
 
 function Container(){
   
