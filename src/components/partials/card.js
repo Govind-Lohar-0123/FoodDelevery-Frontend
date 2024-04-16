@@ -12,6 +12,7 @@ function Card(props) {
     let finalPrice=(foodQty*price);
     function handleAddToCard (e){
         e.preventDefault();
+        if(getToken()==null)return ;
         
         let foodItem={foodQty,foodSize,foodId:props.item._id,foodPrice:finalPrice,foodName:props.item.foodName,foodImg:props.item.foodImg};
         
