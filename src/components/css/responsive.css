@@ -1,0 +1,111 @@
+
+
+
+@media screen and (max-width:720px){
+  .fa-solid{
+    display: block;
+  }
+  
+  header{
+    position: relative;
+  }
+  nav{
+    justify-content: space-between;
+    margin-inline:20px;
+   
+  }
+  .login-sign{
+    flex-direction: column;
+   
+    width:100%;padding:0;
+  }
+  
+  nav > ul {
+    /* display:none; */
+    position: absolute;
+    
+    top:50px;
+    width:100%; 
+    left:-1000px;
+    transition: all .5s ease-out;
+    gap:30px;
+    align-items: center;
+    padding-block: 20px;
+    flex-direction: column;
+    background-color: black;
+  }
+}
+#check:checked ~ .menu-bar i::before{
+  content: "\f00d";
+}
+#check:checked ~ ul{
+  transition: all .5s ease-in-out;
+  left:0;
+}
+
+
+/* /*******GRID BREAK POINT RESPOSIVE///////// */
+
+
+
+@media screen and (max-width:768px){
+  
+}
+
+@media screen and (max-width:1200){
+  .row-div .col-div{
+    height: 370px !important;
+   }
+}
+
+@media screen and (max-width:992px){
+  :root{
+    font-size: 80%;
+ }
+ .food-search{
+  width: 60%;;
+ }
+  #dashboard{
+    grid-template-columns: repeat(1,1fr);
+
+  }
+  .profile-dash{width:100%;}
+  .row-div{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .card-body > div{
+    gap:10px;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .modal-div{
+    width: 80% !important;;
+  }
+}
+@media screen and (max-width:576px){
+  .row-div{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+  }
+  .food-search{
+    width: 80%;;
+   }
+  .row-div .col-div{
+   height: 370px !important;
+  }
+  .card-body > div{
+    
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+  }
+  .card-body > div span{
+    grid-column: 1/3;
+  }
+  .card-body > div select ,.card-body > div span{
+   
+
+  }
+}
+@media screen and (max-width:500px){
+  
+  
+}

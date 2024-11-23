@@ -1,0 +1,310 @@
+:root {
+    /* font-size: 10%; */
+}
+
+*,
+p {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+header {
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* //////COMMON CSSS////////// */
+.font-weight-bold {}
+
+
+
+
+
+
+/*************Bckground**********/
+.back-ground {
+    background-color: black;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    height: 600px;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.back-ground div:last-child {
+    /* margin-block:auto; */
+    width: 100%;
+
+}
+
+.food-search {
+    position: absolute;
+
+    top: 50%;
+    z-index: 5;
+    width: 50%;
+    left: 50%;
+
+    display: flex;
+    transform: translate(-50%, -50%);
+
+    justify-content: space-between;
+
+
+}
+
+.food-search input {
+    padding: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    /* outline: */
+    border: 0;
+    width: 80%;
+    margin-inline: auto;
+
+
+}
+
+.search-icon {
+    width: 10% !important;
+
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-icon i {
+    display: block;
+
+}
+
+.slider-div {
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    height: 90%;
+    padding: 10px;
+    margin-bottom: auto;
+    margin-top: 10px;
+
+}
+
+.paginate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    margin-bottom: auto;
+    padding-block: 10px;
+    gap: 10px;
+
+
+}
+
+.paginate>li:hover {
+    transform: scale(1.2);
+}
+
+.paginate>li {
+    border: solid 2px white;
+    background-color: blue;
+    /* width:60px; */
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+
+}
+
+.paginate>li>a {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    color: white !important;
+    ;
+
+}
+
+.paginate>li:first-child {
+    margin-right: 5rem;
+
+}
+
+.paginate>li:last-child {
+    margin-left: 5rem;
+
+}
+
+.slider-div {
+    display: flex;
+    position: relative;
+
+
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    ;
+    position: absolute;
+    left: -200%;
+    top: 0;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* .slide:nth-child(1){background-color: red;}
+.slide:nth-child(2){background-color:blue;}
+.slide:nth-child(3){background-color:green;}
+.slide:nth-child(4){background-color:yellow;}
+.slide:nth-child(5){background-color:pink;}
+.slide:nth-child(6){background-color:orange;} */
+
+/* ////////FOOD SECTION/////////// */
+
+#food-section {
+
+    /* border:solid 2px red; */
+}
+
+.card {
+    height: 60% !important;
+    ;
+}
+
+.card-img {
+    width: 100%;
+    height: 60%;
+}
+
+.card-title {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 10px;
+    font-size: 1.3rem;
+}
+
+select {
+    /* font-size:1rem!important; */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+option {
+
+    text-align: center;
+
+
+}
+
+.food-price {
+    font-size: 1.5rem;
+    ;
+    font-weight: bold;
+}
+
+.card-body>div {
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center!important; */
+
+}
+
+.card-body>div select,
+.card-body>div span {
+
+    width: 75%;
+    margin-inline: auto;
+}
+
+.card-footer button {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.row-div {
+    display: grid;
+    gap: 40px;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-div .col-div {
+    width: 80% !important;
+    height: 405px !important;
+}
+
+marquee {
+    background-color: red;
+    margin-top: 10px;
+    padding: 0;
+    color: white
+}
+
+.card:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+/*        food section part category */
+
+.food-category {
+    background-color: black;
+    text-transform: uppercase;
+
+}
+
+.food-category h2 {
+    line-height: 60px;
+    padding-left: 2rem;
+    width: 100%;
+    border-bottom: solid 5px rgb(117, 84, 149);
+}
+
+.model {
+    z-index: 1000;
+}

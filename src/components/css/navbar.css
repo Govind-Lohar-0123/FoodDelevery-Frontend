@@ -1,0 +1,81 @@
+*{
+    margin: 0 ;;
+    padding: 0 ;;
+    list-style: none;
+   
+    box-sizing: border-box;
+}
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 50px;
+    
+}
+header{
+    background-color: red;
+    padding:10px;
+    z-index:1000;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+   
+}
+nav ul {
+    display: flex;
+    justify-content:space-around;
+    width:50%;
+    z-index: 10;
+    align-items: center;
+    margin: 0 !important;
+}
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition: all .5s ease;
+    letter-spacing:1px;
+    font-weight: bold!important;
+    text-transform:uppercase;
+}
+nav > ul > li a:hover{
+    background-color: white;
+    padding:8px;color:black;
+    border-radius: 5px;
+    letter-spacing:2px;
+}
+
+.login-sign > li:hover{
+    color: black ;
+    
+}
+.fa-solid{
+    display:none;
+}
+
+
+.card-shopping{
+  
+    background-color: white;
+    padding:5px;position: relative;
+    font-size: 1.2rem;;
+    font-weight:bold;border-radius: 5px;;
+}
+#badge{
+    color:black;
+    position: absolute;
+    font-size:1rem;
+    background-color: red;
+    border-radius: 100%;
+    min-width:25px;
+    min-height:25px;
+    font-weight:bold;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    top:-5px;border:solid 1px white;
+    right:0;
+}
