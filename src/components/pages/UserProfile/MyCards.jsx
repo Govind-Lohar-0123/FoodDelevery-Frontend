@@ -38,7 +38,7 @@ export default function MyOrders() {
 
     dispatch(addMyOrders(email, myOrders));
     dispatch(clearToCart());
-    window.location.href = "/";
+    window.location.href = "/myorders";
 
   }
 

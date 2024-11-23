@@ -16,7 +16,6 @@ export default async function sendEmail(options) {
 
   }
   catch (err) {
-    console.log(err.message);
     return ;
 
 

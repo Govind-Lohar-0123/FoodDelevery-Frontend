@@ -7,10 +7,11 @@ import { CircularProgress, Box, Typography } from "@mui/material";
 import { getAllFoodsAction } from "../Redux/actions/foodAction.js";
 function FoodSection() {
     let [search, setSearch] = useState("");
+    const [res, setResult] = useState({ type: false, msg: "" });
     let dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllFoodsAction());
-    }, [])
+    }, [res])
 
     const result = useSelector((state) => state.getAllFoodsData);
 
@@ -46,8 +47,8 @@ function FoodSection() {
                                         }).
 
                                             map((item, i) => {
-                                                // console.log("hello");
-                                                return (<FoodCard item={item} key={i} />)
+                                                
+                                                return (<FoodCard item={item} key={i} action={{ res, setResult }} />)
 
                                             })
                                     }

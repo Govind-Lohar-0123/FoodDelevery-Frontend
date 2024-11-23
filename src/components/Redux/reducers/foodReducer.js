@@ -19,7 +19,7 @@ export const foodCartReducer = (state = [], actions) => {
             
             return getFoodCardsFromStorage();
         case "CLEAR":
-            console.log("hello")
+            
             clearFoodCardsFromStorage();
             return state;
         default:

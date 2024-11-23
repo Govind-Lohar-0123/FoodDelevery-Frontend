@@ -4,9 +4,10 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import styled from '@emotion/styled';
-import {Link as routerLink} from "react-router-dom"
+import { Link as routerLink } from "react-router-dom"
 import { Link } from '@mui/material';
 import { userRegister } from './userApi';
+import { isValidEmail } from './regularExp';
 
 const style = {
     position: 'absolute',
@@ -30,10 +31,16 @@ export default function Register() {
     const [user_data, setUser_data] = useState({
         name: "", email: "", password: "", confirmPassword: "",
     });
+
+    
     const handleInput = (e) => {
         setUser_data({ ...user_data, [e.target.name]: e.target.value });
     }
     const registerHandle = () => {
+        if (isValidEmail(user_data.email) == false) {
+            setResult({ type: true, msg: "Email Type is Invalid..." });
+            return;
+        }
         userRegister(user_data, setResult);
     }
     return (
@@ -66,7 +73,7 @@ export default function Register() {
 
                     <Button variant='contained' onClick={registerHandle} className="mx-auto d-block text-bold w-50">Sign Up</Button>
                     <Box className="my-2"> <span>Account Already exist :-</span> <Link to="/login" component={routerLink} className="" style={{ textDecoration: "underline" }}>Login</Link>
-                        </Box>
+                    </Box>
                 </FormStyle>
             </Box>
 

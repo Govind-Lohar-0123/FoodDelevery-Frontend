@@ -33,7 +33,7 @@ export function updateFoodCardToStorage({ foodItem, idx }) {
 export function clearFoodCardsFromStorage() {
 
     localStorage.removeItem("foodCards");
-    console.log("hello")
+
 }
 
 

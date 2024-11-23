@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import { Typography, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { Typography, FormControl, Box, InputLabel, Select, MenuItem } from "@mui/material";
 import { getUser } from "./auth/userActions.js";
 import { addToCart, updateToCart } from "../Redux/actions/foodAction.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { getToken } from "./auth/tokenAction.js"
 function FoodCard(props) {
     let dispatch = useDispatch();
-
+    let { res: result, setResult } = props.action;
     const foodCards = useSelector((state) => state.getFoodCardData);
     const [foodQty, setFoodQty] = useState(1);
     const [foodSize, setFoodSize] = useState("full");
@@ -18,12 +18,12 @@ function FoodCard(props) {
 
     let finalPrice = (foodQty * price);
     function handleAddToCard(e) {
+        let token = getToken();
 
 
-
-        if (getUser() == null || getUser() == undefined) navigate("/login")
-
-        let foodItem = { foodQty, foodSize, foodId: props.item._id, foodPrice: finalPrice, foodName: props.item.foodName, foodImg: props.item.foodImg };
+        if (token == null || token == undefined) return navigate("/login");
+        let user_email = getUser().email;
+        let foodItem = { user_email, foodQty, foodSize, foodId: props.item._id, foodPrice: finalPrice, foodName: props.item.foodName, foodImg: props.item.foodImg };
 
         let idx = -1;
         for (let i = 0; i < foodCards.length; i++) {
@@ -34,9 +34,16 @@ function FoodCard(props) {
                 break;
             }
         }
-        if (idx == -1) dispatch(addToCart(foodItem));
-        else dispatch(updateToCart({ foodItem, idx }));
+        if (idx == -1) {
+            dispatch(addToCart(foodItem));
+
+        }
+        else {
+            dispatch(updateToCart({ foodItem, idx }));
+        }
         window.location.reload();
+
+
     }
 
 
@@ -46,6 +53,7 @@ function FoodCard(props) {
 
 
         <div className="card  col-div " >
+
             <img src={props.item.foodImg} className="card-img w-100" />
             <div className="card-body p-0 ">
                 <p className="card-title font-weight-bold" >{props.item.foodName}</p>

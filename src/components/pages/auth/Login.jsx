@@ -55,6 +55,10 @@ export default function Login() {
         if (checkMe == true) {
             addEmailPassToCookie(user_data.email, user_data.password);
         }
+        if (isValidEmail(user_data.email) == false) {
+            setResult({ type: true, msg: "Email Type is Invalid..." });
+            return;
+        }
         userLogin({ ...user_data }, setResult);
     }
     const sendEmailHandle = () => {

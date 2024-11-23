@@ -65,7 +65,7 @@ export async function userLogin(user_data, setResult) {
         })
 
         if (status == 200) {
-            console.log(data.user);
+
             setUser(data.user);
             setToken(data.token);
             window.location.href = "/"

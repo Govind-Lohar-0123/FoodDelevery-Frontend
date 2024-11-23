@@ -50,8 +50,8 @@ export default function LeftSlide() {
                 <Box className="mt-3">
                     <ListStyle className="d-flex gap-2" style={{ flexDirection: "column" }}>
                         <ListItem><i className="fa-regular text-white  fa-user"></i><Link to="/profile" component={routerLink} > My Profile </Link></ListItem>
-                        <ListItem><i className="fa-solid fa-book text-white"></i><Link to="/mycard" component={routerLink} > My Orders </Link></ListItem>
-                        <ListItem><i className="fa-solid text-white fa-right-from-bracket"></i><Link to="/myorders" component={routerLink} >My Cards</Link></ListItem>
+                        <ListItem><i className="fa-solid fa-book text-white"></i><Link to="/myorders" component={routerLink} > My Orders </Link></ListItem>
+                        <ListItem><i className="fa-solid text-white fa-right-from-bracket"></i><Link to="/mycards" component={routerLink} >My Cards</Link></ListItem>
                         <ListItem onClick={() => deleteAccount(email)}><i className="fa-solid text-white fa-right-from-bracket"></i><Link to="#" component={routerLink} onClick={() => deleteAccount(email)} >Delete Account</Link></ListItem>
                         <ListItem><i className="fa-solid text-white fa-comment"></i><Link to="#" onClick={() => logOut()} >Logout</Link></ListItem>
                     </ListStyle>

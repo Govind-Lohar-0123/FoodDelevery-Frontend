@@ -14,7 +14,7 @@ export default function MyCard() {
 
   }, [])
   const myOrders = useSelector((state) => state.getMyOrdersData)
-  console.log(myOrders)
+  
   return (<>
 
 
@@ -49,7 +49,7 @@ export default function MyCard() {
                         <td>{item.foodQty}</td>
                         <td>{item.foodSize}</td>
                         <td>{item.foodPrice}</td>
-                        <td className="w-25 h-25"><img src={item.foodImg} className="d-block w-100 h-25" alt="" /></td>
+                        <td  style={{width:"150px",height:"150px"}}><img src={item.foodImg} className="d-block w-100 h-100" alt="" /></td>
                       </tr>
                     )
                   })

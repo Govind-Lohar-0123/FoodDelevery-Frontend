@@ -59,7 +59,7 @@ function Navbar() {
                                     }
                                     {isLogin ?
                                         <li className="card-shopping p-2 " >
-                                            <NavLink to="/mycard" className="text-dark " >
+                                            <NavLink to="/mycards" className="text-dark " >
                                                 <span className="mx-auto my-auto " id="badge">{cardCount}</span>
                                                 <i className="  fa-solid fa-cart-shopping"></i>
                                                 Card
