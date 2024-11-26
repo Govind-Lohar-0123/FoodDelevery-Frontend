@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import styled from '@emotion/styled';
+import { styled } from '@mui/material';
 import { Link as routerLink } from "react-router-dom"
 import { Link } from '@mui/material';
 import { userRegister } from './userApi';
@@ -23,6 +23,11 @@ const style = {
 
 const FormStyle = styled("form")(({ theme }) => ({
     "i": { marginRight: "10px" }
+}))
+const Component=styled(Box)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        width:330
+    }
 }))
 
 export default function Register() {
@@ -47,7 +52,7 @@ export default function Register() {
         <div className="border-none">
 
 
-            <Box sx={style} className="p-4">
+            <Component sx={style} className="p-4">
                 {(result.type == true) ? <div className="alert alert-primary" role="alert">
                     {result.msg}
                 </div> : ""}
@@ -75,7 +80,7 @@ export default function Register() {
                     <Box className="my-2"> <span>Account Already exist :-</span> <Link to="/login" component={routerLink} className="" style={{ textDecoration: "underline" }}>Login</Link>
                     </Box>
                 </FormStyle>
-            </Box>
+            </Component>
 
         </div>
     );

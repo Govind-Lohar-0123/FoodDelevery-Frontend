@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useNavigate, Navigate } from "react-route
 import Layout from "./components/pages/Layout";
 import Home from "./components/pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AdminDash from "./components/pages/Admin/AdminDash";
+
 import ProfileLayout from "./components/pages/UserProfile/ProfileLayout.jsx";
 import MyProfile from "./components/pages/UserProfile/MyProfile.jsx";
 

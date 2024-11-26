@@ -14,6 +14,12 @@ import sendEmail from '../emailjs/email.js';
 import { isValidEmail } from './regularExp.js';
 // import {useNavigator} from "react-router-dom";
 
+const Component=styled(Box)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        width:340
+    }
+}))
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -82,9 +88,9 @@ export default function ForgetPassword() {
 
 
 
-            <div>
+            
 
-                <Box sx={style} className="p-4">
+                <Component sx={style} className="p-4">
                     {(result.type == true) ? <div className="alert alert-primary" role="alert">
                         {result.msg}
                     </div> : ""}
@@ -105,11 +111,11 @@ export default function ForgetPassword() {
                             <Button variant='contained' onClick={sendEmailHandle} className="mt-3  btn-primary text-bold w-50">Submit</Button>
                         </Box>
                     </form>
-                </Box>
+                </Component>
 
 
 
-            </div>
+            
 
 
         </div>

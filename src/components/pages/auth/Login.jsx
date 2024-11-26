@@ -39,6 +39,11 @@ let options = {
     subject: "Welcome to reset your password",
     msg: `<p>Please click on the link to reset you password link: ${urlPath}/forget-password</p>`
 }
+const Component=styled(Box)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        width:340
+    }
+}))
 export default function Login() {
 
     let navigate = useNavigate();
@@ -88,10 +93,10 @@ export default function Login() {
 
 
 
-            <div className='w-100'>
+           
 
 
-                <Box sx={style} className="p-4">
+                <Component sx={style} className="p-4">
                     {(result.type == true) ? <div className="alert alert-primary" role="alert">
                         {result.msg}
                     </div> : ""}
@@ -118,12 +123,12 @@ export default function Login() {
                         <Box className="my-2"> <span>Create new account :-</span> <Link to="/signup" component={routerLink} className="" style={{ textDecoration: "underline" }}>Register</Link>
                         </Box>
                     </FormStyle>
-                </Box>
+                </Component>
 
 
 
 
-            </div>
+            
 
 
         </div>

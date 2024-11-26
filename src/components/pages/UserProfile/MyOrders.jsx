@@ -18,7 +18,7 @@ export default function MyCard() {
   return (<>
 
 
-    <div className="profile-right col-div mt-5  " id="myorder">
+    <div className="profile-right col-div mt-5  " id="myorder" >
 
       {
         (myOrders.length > 0) ?
@@ -41,7 +41,7 @@ export default function MyCard() {
                 {
 
                   myOrders.map((item, i) => {
-
+                    console.log(item)
                     return (
                       <tr>
                         <td>{i + 1}</td>

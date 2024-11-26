@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from '@mui/material';
+import { Link, styled } from '@mui/material';
 import { Link as routerLink } from "react-router-dom"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -19,6 +19,16 @@ const style = {
     p: 4,
 };
 
+const Component = styled(Box)(({ theme }) => ({
+        [theme.breakpoints.down("md")]:{
+            backgroundColor:"white",
+            marginTop:"3rem"
+           
+        },
+        [theme.breakpoints.down("sm")]:{
+            width:"90%"
+        }
+}))
 
 export default function ChangePassword() {
 
@@ -35,7 +45,7 @@ export default function ChangePassword() {
         <div className="border-none">
 
 
-            <Box sx={style} className="p-4">
+            <Component sx={style} className="p-4">
                 {(result.type == true) ? <div className="alert alert-primary" role="alert">
                     {result.msg}
                 </div> : ""}
@@ -69,7 +79,7 @@ export default function ChangePassword() {
                         <Button variant='contained' onClick={changePassHandle} className="mt-3  btn-primary text-bold w-50">Change Password</Button>
                     </Box>
                 </form>
-            </Box>
+            </Component>
 
 
 

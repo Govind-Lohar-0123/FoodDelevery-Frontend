@@ -1,6 +1,8 @@
 export const url = "https://fooddelevery-server.onrender.com";
 // export const url = "http://localhost:8000";
+
 export const clientUrl="https://fooddeleveryclient.onrender.com";
+// export const clientUrl = "http://localhost:3000";
 
 export const bannerImgs = [
 

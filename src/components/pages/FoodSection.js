@@ -3,8 +3,20 @@ import React, { useEffect, useState } from "react";
 import FoodCard from "./FoodCard.js";
 import { useDispatch, useSelector } from "react-redux";
 
-import { CircularProgress, Box, Typography } from "@mui/material";
+import { CircularProgress, Box, Typography, styled } from "@mui/material";
 import { getAllFoodsAction } from "../Redux/actions/foodAction.js";
+
+const SearchComponent=styled(Box)(({theme})=>({
+    "input":{
+        [theme.breakpoints.down("md")]:{
+        width:"80%!important" ,
+            padding:"10px 20px"
+        },
+        fondSize:"18px!important",
+        fontWeight:"bold",
+        height:"50px"
+    }
+}))
 function FoodSection() {
     let [search, setSearch] = useState("");
     const [res, setResult] = useState({ type: false, msg: "" });
@@ -25,9 +37,9 @@ function FoodSection() {
             }
 
 
-            <Box className="w-100">
+            <SearchComponent className="w-100">
                 <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder="Search Food Here." className="p-2 w-25 my-3 border-none outline-none mx-auto d-block" />
-            </Box>
+            </SearchComponent>
             {
                 (result.status) ?
 

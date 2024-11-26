@@ -39,7 +39,7 @@ export default function MyOrders() {
 
     dispatch(addMyOrders(email, myOrders));
     dispatch(clearToCart());
-    window.location.href = clientUrl+"/myorders";
+    window.location.href = clientUrl + "/myorders";
 
   }
 
@@ -50,12 +50,12 @@ export default function MyOrders() {
   return (<>
 
 
-    <div className="profile-right col-div mt-5 " id="myorder">
+    <div className="profile-right col-div mt-5 w-100" id="myorder">
 
       {
         (foodCards.length > 0) ?
           <>
-            <table className="table-div mt-5 ">
+            <table className="table-div mt-5 " >
               <caption className="text-white text-center font-weight-bold">My Cards</caption>
               <thead>
 
