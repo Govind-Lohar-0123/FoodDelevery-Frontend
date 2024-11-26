@@ -8,6 +8,7 @@ import Modal from '@mui/material/Modal';
 
 import { userForgetPassword, userRegister } from './userApi';
 import { getUser } from './userAction';
+import { clientUrl } from '../../../partials/data';
 
 const StyleBox = styled(Box)(({ theme }) => ({
 
@@ -64,7 +65,7 @@ export default function ForgetPassword() {
 
                     <Box className="d-flex gap-2">
 
-                        <Button variant='contained' onClick={()=>window.location.href="/"} className="mt-3  bg-danger  text-bold w-50">Cancel</Button>
+                        <Button variant='contained' onClick={()=>window.location.href=clientUrl} className="mt-3  bg-danger  text-bold w-50">Cancel</Button>
 
                         <Button variant='contained' onClick={handleForgetPassword} className="mx-auto d-block text-bold w-50">Change</Button>
                     </Box>

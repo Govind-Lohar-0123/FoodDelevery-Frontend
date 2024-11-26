@@ -4,6 +4,7 @@ import { getToken, setToken } from "./tokenAction";
 import { isValidPassword, isValidText } from "./regularExp";
 import logOut from "./logout";
 import { url as urlPath } from "../partials/data";
+import { clientUrl } from "../../../partials/data";
 export async function userRegister(user_data, setResult) {
 
     let { name, email, password, confirmPassword } = user_data;
@@ -35,7 +36,7 @@ export async function userRegister(user_data, setResult) {
 
             setUser(data.user);
             setToken(data.token);
-            window.location.href = "/"
+            window.location.href = clientUrl
 
         }
 
@@ -68,7 +69,7 @@ export async function userLogin(user_data, setResult) {
 
             setUser(data.user);
             setToken(data.token);
-            window.location.href = "/"
+            window.location.href =clientUrl;
 
         }
 
@@ -152,7 +153,7 @@ export async function userForgetPassword(user_data, setResult) {
         })
 
         if (status == 200) {
-            window.location.href = "/"
+            window.location.href = clientUrl
         }
 
         setResult({ type: true, msg: data.msg });
@@ -177,7 +178,7 @@ export async function deleteAccount(email) {
         
         if (status == 200) {
             logOut();
-            window.location.href = "/"
+            window.location.href = clientUrl
         }
 
 

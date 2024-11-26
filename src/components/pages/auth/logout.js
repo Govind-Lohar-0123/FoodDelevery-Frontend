@@ -1,3 +1,4 @@
+import { clientUrl } from "../../partials/data";
 import { removeCookies } from "./cookieAction";
 import { removeToken } from "./tokenAction";
 import { removeUser } from "./userActions";
@@ -7,5 +8,5 @@ export default function logOut() {
     removeToken();
     window.localStorage.removeItem("email")
     
-    window.location.href = "/";
+    window.location.href =clientUrl
 }

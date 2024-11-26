@@ -6,6 +6,7 @@ import { getUser } from "../auth/userActions.js";
 import { useDispatch, useSelector } from "react-redux";
 import { clearToCart, getMyAllCards, removeFromCart } from "../../Redux/actions/foodAction.js";
 import { addMyOrders } from "../../Redux/actions/orderAction.js";
+import { clientUrl } from "../../partials/data.js";
 
 export default function MyOrders() {
   let dispatch = useDispatch();
@@ -38,7 +39,7 @@ export default function MyOrders() {
 
     dispatch(addMyOrders(email, myOrders));
     dispatch(clearToCart());
-    window.location.href = "/myorders";
+    window.location.href = clientUrl+"/myorders";
 
   }
 
